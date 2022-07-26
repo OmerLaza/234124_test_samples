@@ -53,4 +53,14 @@ int main()
     cout << d(10) << endl;
     d = DivideBy(0); // this will throw an exception
     return 0;
-}
+} // Notice this program will crash because of the ZeroDivisorException, which is thrown in the DivideBy constructor.
+  // ***NOT MEMORY SAFE!***
+
+/*
+Output:
+1
+10
+3
+terminate called after throwing an instance of 'DivideBy::ZeroDivisorException'
+  what():  Divisor cannot be zero
+ */
